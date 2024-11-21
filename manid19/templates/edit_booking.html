@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Edit Booking</h1>
+
+<form method="POST" action="">
+    <label for="user_name">Name</label>
+    <input type="text" name="user_name" id="user_name" value="{{ booking.user_name }}" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="{{ booking.email }}" required>
+
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" id="phone" value="{{ booking.phone }}" required>
+
+    <label for="seats">Seats</label>
+    <input type="number" name="seats" id="seats" value="{{ booking.seats }}" required>
+
+    <label for="departure_station">Departure Station</label>
+    <input type="text" name="departure_station" id="departure_station" value="{{ booking.departure_station }}" required>
+
+    <label for="destination_station">Destination Station</label>
+    <input type="text" name="destination_station" id="destination_station" value="{{ booking.destination_station }}" required>
+
+    <button type="submit" class="btn btn-submit">Save Changes</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Book Bus: {{ bus.name }}</h1>
+<form action="/book/{{ bus.id }}" method="POST">
+    <label for="user_name">Name:</label>
+    <input type="text" name="user_name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" required>
+
+    <label for="seats">Seats:</label>
+    <input type="text" name="seats" required>
+
+    <label for="departure_station">Departure Station:</label>
+    <input type="text" name="departure_station" required>
+
+    <label for="destination_station">Destination Station:</label>
+    <input type="text" name="destination_station" required>
+
+    <button type="submit">Book Now</button>
+</form>
+{% endblock %}

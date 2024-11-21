@@ -1,0 +1,159 @@
+/* General Page Style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #7a6b6b; /* Light background for better readability */
+    color: #333; /* Default text color */
+}
+
+header {
+    background-color: #4CAF50; /* Green header for a welcoming feel */
+    padding: 1rem;
+    color: #6a5959; /* White text for contrast */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: #1e1414; /* White links in the header */
+    padding: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Add hover effect for links */
+}
+
+/* Container for content */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #c9baba; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Bus List Styles */
+.bus-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.bus-card {
+    width: 200px;
+    background-color: #764f4f; /* Light card background */
+    border: 1px solid #241616; /* Subtle border */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effects */
+}
+
+.bus-card:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.bus-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px; /* Uniform height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.bus-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #4CAF50; /* Green title color */
+}
+
+.bus-card p {
+    font-size: 0.9rem;
+    color: #e9e1e1; /* Muted text for descriptions */
+}
+
+/* Form Styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #e9e5e5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #090303;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #4CAF50; /* Green submit button */
+    color: #2b1f1f; /* White text */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+form button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f1e8e8; /* White table background */
+    border: 1px solid #1f0b0b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Subtle border for rows */
+}
+
+th {
+    background-color: #010801; /* Green header row */
+    color: #fff; /* White header text */
+    text-transform: uppercase; /* Uppercase for headers */
+    font-size: 1rem;
+}
+
+td {
+    color: #555; /* Muted text for table content */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Matching footer with header */
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bus-list {
+        flex-direction: column; /* Stack cards vertically on small screens */
+    }
+
+    form {
+        max-width: 100%; /* Full width for forms */
+    }
+}

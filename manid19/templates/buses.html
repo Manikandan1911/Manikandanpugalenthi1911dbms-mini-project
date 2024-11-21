@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>All Buses</h1>
+<div class="bus-list">
+    {% for bus in buses %}
+    <div class="bus-card">
+        <img src="{{ url_for('static', filename='bus_images/' + bus.image_url) }}" alt="{{ bus.name }}">
+        <h3>{{ bus.name }}</h3>
+        <p>{{ bus.description }}</p>
+        <p>Rating: {{ bus.rating }}</p>
+        <a href="/book/{{ bus.id }}">Book Now</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
